@@ -5,6 +5,9 @@ env/
 #Hide DSstore
 .DSstore
 
+#Hide credentials in config.ini
+config.ini
+
 # Compiled Python files
 __pycache__/
 *.pyc

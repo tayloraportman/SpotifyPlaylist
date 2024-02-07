@@ -1,19 +1,14 @@
 # Create the perfect playlist on Spotify
 
-This application allows you to take full advantage of Spotify's reccomendation features to create
+This application allows you to take full advantage of Spotify's reccomendation algorithms to create
 fun and interesting playlists that change up the vibe at intervals of your choosing.
 
 This application was built for yoga teachers who want a faster way to create thoughtful yoga playlists 
 without spending all afternoon on Spotify!
 
-It works by creating different segments for each part of the playlist. Each segment gets assigned songs of your choosing to use as inspiration, along with the duration of the segment and other attributes (BPM, energy). This allows you to create the exact vibe you want at intervals meaningful to your class.
-
-## What you need
-- Spotify developer API access (see below for more information)
-- A song or two in mind that suit each segment of your playlist!
+It works by creating different segments for each part of the playlist. Each segment gets assigned songs of your choosing to use as inspiration along with variables such as the duration of the segment, preferred tempo, and energy attributes. This allows you to create the exact vibe you want at intervals meaningful to your class.
 
 **Baseline segments include the following:**
-
 * Breath: 5 min of slow meditation music, tempo 70, energy 0.2
 * Warm-up: 10 min of chill upbeat music, tempo 100, energy 0.4
 * Flow 1: 15 min of chill pop music, tempo 130, energy 0.8
@@ -21,8 +16,11 @@ It works by creating different segments for each part of the playlist. Each segm
 * Cooldown: 15 min of calm vibey music, tempo 80, energy 0.4
 * Savasana: 10 min of meditation music, tempo 70, energy 0.2
 
-## Features
+## What you need
+- Spotify developer API access (see below for more information)
+- A song or two in mind that suit each segment of your playlist!
 
+## Features
 - Create Spotify playlists automatically.
 - GUI for easy interaction.
 - Customizable playlist settings.
@@ -39,14 +37,14 @@ pip install -r requirements.txt
 To use this playlist deveolpmet tool you will need to create a spotify for developers app. To do this: 
 1. Go to https://developer.spotify.com/ and log in to Spotify
 2. Select 'create application' and check the box for 'Web API'
-- This will bring you to a page where you can access your personal Client ID and Client Secret
+This will bring you to a page where you can access your personal Client ID and Client Secret
 3. Input Client ID and Client Secret into the config settings 
-- In terminal run the following command: 
+In terminal run the following command: 
 ```
 make config
 ```
-- This will prompt you to enter your Client ID and Client Secret
-- If you need to change the Client ID and or Client Secret, or it was entered incorrectly, you can reset the cofig settings by running 'make clean' and start again
+This will prompt you to enter your Client ID and Client Secret
+- If you need to change the Client ID and or Client Secret, or it was entered incorrectly, you can reset the config settings by running 'make clean' and start again
 
 ## Create your playlist!
 To create your playlist run the following command:

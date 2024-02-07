@@ -1,0 +1,38 @@
+Playlist Name: Inspo Example
+
+Name: Breath
+Example Songs: Now & Anatma - Breathe In Life, Studio Tranquilo - Serenity
+Included Songs: none
+Target Attributes: target_energy=0.2, target_tempo=70
+Duration: 5
+
+Name: Warm-up
+Example Songs: Beauvois - Echo, FACESOUL - Love, Mac Miller - Good News
+Included Songs: none
+Target Attributes: target_energy=0.4, target_tempo=100
+Duration: 10
+
+Name: Flow 1
+Example Songs: Katie Tupper - Little Love, Lily Meola - Sunshine
+Included Songs: none
+Target Attributes: target_energy=0.8, target_tempo=130
+Duration: 15
+
+Name: Flow 2
+Example Songs: ODIE - Little Lies, Trevor Hall - Blue Mountain State
+Included Songs: none
+Target Attributes: target_energy=0.8, target_tempo=130
+Duration: 10
+
+Name: Cool down
+Example Songs: Beautiful Chorus - Success, Chris Sholar - Let Go
+Included Songs: none
+Target Attributes: target_energy=0.4, target_tempo=80
+Duration: 15
+
+Name: Savasana
+Example Songs: Steven Halpern - Tibetan Bowl I, Steven Halpern - Deep Theta 4 Hz
+Included Songs: none
+Target Attributes: target_energy=0.2, target_tempo=70
+Duration: 10
+

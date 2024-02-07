@@ -9,7 +9,6 @@ def load_config():
 
 client_id, client_secret, redirect_uri = load_config()
 
-
 def spotify_authenticate(client_id, client_secret, redirect_uri):
     scope = 'playlist-modify-public'
     auth_manager = SpotifyOAuth(client_id=client_id,
@@ -68,41 +67,6 @@ def select_tracks_for_duration(tracks, target_duration_minutes):
             break  # Stop adding tracks once the target duration is reached or exceeded
 
     return selected_tracks
-
-def main():
-    client_id, client_secret, redirect_uri = load_config()
-
-    sp = spotify_authenticate(client_id, client_secret, redirect_uri)
-
-    # Read and parse the inspo.txt file
-    playlist_name, segments = read_inspo_file('inspo.txt')  
-
-    # Create a playlist with the parsed name
-    playlist_id = create_playlist(sp, playlist_name)
-
-    for segment in segments:
-        # Find seed tracks and get recommendations
-        seed_track_ids = find_seed_tracks(sp, segment['example_songs'])
-        recommended_tracks = get_recommendations_for_segment(sp, seed_track_ids, segment['target_attributes'], limit=50)  # Increase limit if needed
-        recommended_track_ids = [track['id'] for track in recommended_tracks]
-
-        # Find included tracks
-        included_track_ids = find_included_tracks(sp, segment.get('included_songs', []))
-
-        # Combine recommended and included tracks and fetch their details
-        all_tracks = sp.tracks(recommended_track_ids + included_track_ids)['tracks']
-
-        # Filter out explicit tracks
-        non_explicit_tracks = [track for track in all_tracks if not track['explicit']]
-
-        # Select tracks based on duration from non-explicit tracks
-        selected_track_ids = select_tracks_for_duration(non_explicit_tracks, float(segment['duration']))
-
-        # Add selected tracks to the playlist
-        add_tracks_to_playlist(sp, playlist_id, selected_track_ids)
-
-
-
 def read_inspo_file(file_path):
     with open(file_path, 'r') as file:
         lines = file.readlines()
@@ -148,6 +112,39 @@ def read_inspo_file(file_path):
         segments.append(current_segment)
 
     return playlist_name, segments
+
+def main():
+    client_id, client_secret, redirect_uri = load_config()
+
+    sp = spotify_authenticate(client_id, client_secret, redirect_uri)
+
+    # Read and parse the inspo.txt file
+    playlist_name, segments = read_inspo_file('inspo.txt')  
+
+    # Create a playlist with the parsed name
+    playlist_id = create_playlist(sp, playlist_name)
+
+    for segment in segments:
+        # Find seed tracks and get recommendations
+        seed_track_ids = find_seed_tracks(sp, segment['example_songs'])
+        recommended_tracks = get_recommendations_for_segment(sp, seed_track_ids, segment['target_attributes'], limit=50)  # Increase limit if needed
+        recommended_track_ids = [track['id'] for track in recommended_tracks]
+
+        # Find included tracks
+        included_track_ids = find_included_tracks(sp, segment.get('included_songs', []))
+
+        # Combine recommended and included tracks and fetch their details
+        all_tracks = sp.tracks(recommended_track_ids + included_track_ids)['tracks']
+
+        # Filter out explicit tracks
+        non_explicit_tracks = [track for track in all_tracks if not track['explicit']]
+
+        # Select tracks based on duration from non-explicit tracks
+        selected_track_ids = select_tracks_for_duration(non_explicit_tracks, float(segment['duration']))
+
+        # Add selected tracks to the playlist
+        add_tracks_to_playlist(sp, playlist_id, selected_track_ids)
+
 
 
 

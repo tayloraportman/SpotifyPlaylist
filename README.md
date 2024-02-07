@@ -69,11 +69,11 @@ Each segment includes a window to input:
 
 ## License
 
--MIT License, see the LICENSE file for more information
+- MIT License, see the LICENSE file for more information
 
 ## Author
 Taylor A. Portman
-- With help from Gary, AKA: Chat GPT 4
+* With help from Chat GPT 4
 
 ## Version
 - Version 1.0, Feburary 7, 2024

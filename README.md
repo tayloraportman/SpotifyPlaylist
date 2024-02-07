@@ -1,4 +1,4 @@
-# *** Create the perfect playlist on Spotify ***
+# Create the perfect playlist on Spotify
 
 This application allows you to take full advantage of Spotify's reccomendation features to create
 fun and interesting playlists that change up the vibe at intervals of your choosing.
@@ -12,7 +12,7 @@ It works by creating different segments for each part of the playlist. Each segm
 - Spotify developer API access (see below for more information)
 - A song or two in mind that suit each segment of your playlist!
 
-**The baseline segments given include the following:**
+**Baseline segments include the following:**
 
 * Breath: 5 min of slow meditation music, tempo 70, energy 0.2
 * Warm-up: 10 min of chill upbeat music, tempo 100, energy 0.4
@@ -41,7 +41,7 @@ To use this playlist deveolpmet tool you will need to create a spotify for devel
 2. Select 'create application' and check the box for 'Web API'
 - This will bring you to a page where you can access your personal Client ID and Client Secret
 3. Input Client ID and Client Secret into the config settings 
-- in terminal run the following command: 
+- In terminal run the following command: 
 ```
 make config
 ```
@@ -56,16 +56,16 @@ make create
 This will open up an interface where you can name your playlist, add songs to inspire each segment of the playlist, and edit the segments to your needs. 
 
 Each segment includes a window to input: 
-- Example Songs
+- Example Songs (used to inspire the Spotify's reccommendation feature)
 - Songs you want to include
 - Target tempo (BPM)
 - Target energy (0.0-1)
 - Segment duration (minutes)
 
-# When you have finished modifying the segments and want to save your settings scroll down and select the 'done' button
+### When you have finished modifying the segments and want to save your settings scroll down and select the 'done' button
 This will save the old playlist inspo to an inspo_archive folder and update the playlist settings
 
-# When you are ready to create your playlist select 'create playlist' and check out your sweet new playlist on Spotify!
+### When you are ready to create your playlist select 'create playlist' and check out your sweet new playlist on Spotify!
 
 
 

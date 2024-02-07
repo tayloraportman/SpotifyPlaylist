@@ -62,10 +62,10 @@ Each segment includes a window to input:
 - Target energy (0.0-1)
 - Segment duration (minutes)
 
-* **When you have finished modifying the segments and want to save your settings scroll down and select the 'done' button**
-This will save the old playlist inspo to an inspo_archive folder and update the playlist settings
+ **When you have finished modifying the segments and want to save your settings scroll down and select the 'done' button**
+- This will save the old playlist inspo to an inspo_archive folder and update the playlist settings
 
-* **When you are ready to create your playlist select 'create playlist' and check out your sweet new playlist on Spotify!**
+ **When you are ready to create your playlist select 'create playlist' and check out your sweet new playlist on Spotify!**
 
 ## License
 

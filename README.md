@@ -35,7 +35,7 @@ git clone https://github.com/tayloraportman/SpotifyPlaylist.git
 cd SpotifyPlaylist
 pip install -r requirements.txt
 ```
-## Spotify for Developers
+### Spotify for Developers
 To use this playlist deveolpmet tool you will need to create a spotify for developers app. To do this: 
 1. Go to https://developer.spotify.com/ and log in to Spotify
 2. Select 'create application' and check the box for 'Web API'

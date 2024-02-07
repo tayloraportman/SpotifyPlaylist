@@ -1,6 +1,6 @@
 # Create the perfect playlist on Spotify
 
-This application allows you to take full advantage of Spotify's reccomendation algorithms to create
+This application allows you to take full advantage of Spotify's recommendation algorithms to create
 fun and interesting playlists that change up the vibe at intervals of your choosing.
 
 This application was built for yoga teachers who want a faster way to create thoughtful yoga playlists 
@@ -16,14 +16,14 @@ It works by creating different segments for each part of the playlist. Each segm
 * Cooldown: 15 min of calm vibey music, tempo 80, energy 0.4
 * Savasana: 10 min of meditation music, tempo 70, energy 0.2
 
-## What you need
-- Spotify developer API access (see below for more information)
-- A song or two in mind that suit each segment of your playlist!
-
 ## Features
 - Create Spotify playlists automatically.
 - GUI for easy interaction.
 - Customizable playlist settings.
+
+## What you need
+- Spotify developer API access (see below for more information)
+- A song or two in mind that suit each segment of your playlist!
 
 ## Getting Started 
 To get started, clone this repository and install the required dependencies:

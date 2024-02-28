@@ -10,7 +10,7 @@ def load_config():
 client_id, client_secret, redirect_uri = load_config()
 
 def spotify_authenticate(client_id, client_secret, redirect_uri):
-    scope = 'playlist-modify-public'
+    scope = 'playlist-modify-public playlist-read-private playlist-modify-private'
     auth_manager = SpotifyOAuth(client_id=client_id,
                                 client_secret=client_secret,
                                 redirect_uri=redirect_uri,
